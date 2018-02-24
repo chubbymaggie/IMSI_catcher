@@ -10,7 +10,7 @@
 #### Install Ubuntu 16.04.2 LTS
  Go to http://releases.ubuntu.com/16.04/  and download the Ubuntu 16.04 LTS version of a 64bit desktop.
  
- If you use a VM then give it a min. of 2Gb Memory. Compiling might crash if there is not enough memory
+ If you use a VM then give it a min. of 2Gb Memory. Compiling might crash if there is not enough memory  
  I gave my VM 1 cpu, 2G memory, 20Gb disk, removed the printer and sound card and left the USB in usb2.0 mode.
   
  Update ubuntu after the installation is done:
@@ -65,7 +65,7 @@
  sudo python simple_IMSI-catcher.py
 ```
 
- In terminal 2
+ In terminal 2  
  Start the radio wave sniffer on a channel where a GSM base station/tower transmits in your area.
  ```
  airprobe_rtlsdr.py -f 943400000          # this is the same program called grgsm_livemon
@@ -76,7 +76,8 @@
  00 6b 65 6c 64 2e 6e 6f 72 6d 61 6e 40 67 6d 61 69 6c 2e 63 6f 6d 00
  ```
  
- Watch terminal 1 and wait. The TMSI/IMSI numbers should appear shortly. If nothing appears after 1 min, change the frequency.
+ Watch terminal 1 and wait. The TMSI/IMSI numbers should appear shortly.  
+ If nothing appears after 1 min, change the frequency.
 
  You can also watch the GSM packets in wireshark like this:
  ```
