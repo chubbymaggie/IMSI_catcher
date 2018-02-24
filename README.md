@@ -27,13 +27,13 @@
  sudo pybombs config default_prefix default_prx
  sudo pybombs recipes add gr-recipes git+https://github.com/gnuradio/gr-recipes
  sudo pybombs recipes add gr-etcetera git+https://github.com/gnuradio/gr-etcetera
- sudo pybombs install gr-gsm # This one could take hours to complete
+ sudo pybombs install gr-gsm         # This one could take hours to complete
  sudo ldconfig
 ```
 
  Plug in the SDR-Dongle and check it is detected with dmesg. Then test if `gr-gsm works`: 
  ```
- sudo grgsm_livemon # You should see the blue signal fluctuate
+ sudo grgsm_livemon         # You should see the blue signal fluctuate
 ```
 
  If you see this error - you forgot sudo in front of `grgsm_livemon` 
@@ -68,7 +68,7 @@
  In terminal 2
  Start the radio wave sniffer on a channel where a GSM base station/tower transmits in your area.
  ```
- airprobe_rtlsdr.py -f 943400000 # this is the same program called grgsm_livemon
+ airprobe_rtlsdr.py -f 943400000          # this is the same program called grgsm_livemon
  ```
  Now, change the frequency and stop it when you have output like in the console behind the gui:
  ```
@@ -76,12 +76,10 @@
  00 6b 65 6c 64 2e 6e 6f 72 6d 61 6e 40 67 6d 61 69 6c 2e 63 6f 6d 00
  ```
  
- Watch terminal 1 and wait. The TMSI/IMSI numbers should appear shortly
- 
- If nothing appears after 1 min, change the frequency.
+ Watch terminal 1 and wait. The TMSI/IMSI numbers should appear shortly. If nothing appears after 1 min, change the frequency.
 
  You can also watch the GSM packets in wireshark like this:
  ```
- sudo apt-get install -y wireshark tshark # NB: tshark is a commandline version of wireshark
- sudo wireshark -k -Y '!icmp && gsmtap' -i lo # ignore errors about not running wireshark as root
+ sudo apt-get install -y wireshark tshark     # NB: tshark is a commandline version of wireshark
+ sudo wireshark -k -Y '!icmp && gsmtap' -i lo      # ignore errors about not running wireshark as root
  ```
