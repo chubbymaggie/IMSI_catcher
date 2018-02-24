@@ -36,7 +36,7 @@
  sudo grgsm_livemon # You should see the blue signal fluctuate
 ```
 
- If you see this error - you forgot sudo in front of grgsm_livemon 
+ If you see this error - you forgot sudo in front of `grgsm_livemon` 
  ```
  Using device #0 Generic RTL2832U OEM
  usb_open error -3
@@ -77,6 +77,7 @@
  ```
  
  Watch terminal 1 and wait. The TMSI/IMSI numbers should appear shortly
+ 
  If nothing appears after 1 min, change the frequency.
 
  You can also watch the GSM packets in wireshark like this:
